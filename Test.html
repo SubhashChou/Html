@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    
+    #name-input {
+      margin-top: 150px;
+      font-size: 24px;
+      border: none;
+      padding: 10px;
+      background-color: transparent;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <p>Welcome to Subhash's Homepage</p>
+    <p>Enter your name in the space provided below:</p>
+    <input type="text" id="name-input" placeholder="Your Name" oninput="greetUser(this.value)"> <br><br>
+    <div id="greeting" style="display: none;"></div>
+  </div>
+
+
+  <script>
+    function greetUser(name) {
+      if (name) {
+        document.getElementById("greeting").textContent = "I love you, " + name + "*";
+        document.getElementById("greeting").style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
